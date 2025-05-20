@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Crypto Wallet</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="../css/profile.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <span class="title">Profile</span>
+            <div class="settings-profile">
+                <a href="settings.html" title="Settings"><i class="fas fa-cog"></i></a>
+                <a href="profile.html" title="Profile" class="active">
+                    <img src="https://via.placeholder.com/30" alt="Profile" id="profile-img">
+                </a>
+            </div>
+        </div>
+        <div class="nav-bar">
+            <a href="index.html">Overview</a>
+            <a href="convert.html">Convert</a>
+            <a href="deposit.html">Deposit</a>
+            <a href="withdraw.html">Withdraw</a>
+            <a href="transfer.html">Transfer</a>
+            <a href="history.html">History</a>
+        </div>
+        <div class="profile-section">
+            <h3>Your Profile</h3>
+            <div class="profile-picture">
+                <img src="https://via.placeholder.com/100" alt="Profile Picture" id="profile-picture">
+                <input type="file" id="profile-pic-upload" accept="image/*">
+                <label for="profile-pic-upload" class="btn-upload">Upload New Picture</label>
+            </div>
+            <div class="profile-details">
+                <label>Username</label>
+                <input type="text" value="FixedUsername123" readonly>
+                <label>Email</label>
+                <input type="email" value="user@example.com" readonly>
+                <label>Phone Number</label>
+                <input type="tel" id="phone-number" placeholder="Enter Phone Number" value="+1234567890">
+                <label>Bio</label>
+                <textarea id="bio" placeholder="Tell us about yourself"></textarea>
+                <button class="btn-save">Save Changes</button>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="../js/firebase.js"></script>
+    <script src="../js/profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Crypto Wallet</title>
+    <link rel="stylesheet" href="../css/settings.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Settings</h2>
+        <div class="section">
+            <div class="section-title">Profile Settings</div>
+            <input type="text" value="FixedUsername123" readonly>
+            <input type="file" accept="image/*">
+            <input type="email" value="user@example.com" readonly>
+            <input type="tel" placeholder="Add Phone Number" required>
+            <input type="password" placeholder="Change Password" required>
+            <button class="btn-save">Save Changes</button>
+        </div>
+        <div class="section">
+            <div class="section-title">Security Settings</div>
+            <p><button class="btn-save">View Devices & Logout</button></p>
+            <p><button class="btn-save">Logout from All Devices</button></p>
+            <p class="section-description">2FA is currently unavailable.</p>
+        </div>
+        <div class="section">
+            <div class="section-title">Notification Settings</div>
+            <p>Email and SMS notifications are mandatory for security purposes.</p>
+        </div>
+        <div class="section">
+            <div class="section-title">Language & Currency</div>
+            <select>
+                <option value="en">English</option>
+                <option value="fr">French</option>
+            </select>
+            <select>
+                <option value="usd">USD - Dollar</option>
+                <option value="eur">EUR - Euro</option>
+                <option value="gbp">GBP - Pound</option>
+                <option value="ngn">NGN - Nigerian Naira</option>
+            </select>
+            <button class="btn-save">Save Changes</button>
+        </div>
+        <div class="section">
+            <div class="section-title">Transaction Limits</div>
+            <input type="number" placeholder="Set Daily Withdrawal Limit" min="0">
+            <input type="number" placeholder="Set Daily Transfer Limit" min="0">
+            <button class="btn-save">Save Limits</button>
+        </div>
+        <div class="section">
+            <div class="section-title">Support & Help</div>
+            <p><button class="btn-save">Contact Support</button></p>
+            <p><button class="btn-save">Report an Issue</button></p>
+            <p><button class="btn-save">Submit Feedback</button></p>
+        </div>
+        <div class="section">
+            <div class="section-title">Legal</div>
+            <a href="#">Terms of Service</a><br>
+            <a href="#">Privacy Policy</a><br>
+            <a href="#">KYC Verification</a>
+        </div>
+        <div class="section">
+            <div class="section-title">Delete Account</div>
+            <button class="btn-delete">Deactivate/Close Account</button>
+            <p class="section-description">Download transaction history and wallet backup before deletion.</p>
+        </div>
+    </div>
+    <script type="module" src="../js/firebase.js"></script>
+    <script src="../js/settings.js"></script>
+</body>
+</html>

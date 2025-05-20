@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Withdraw - Crypto Wallet</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="../css/withdraw.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <span class="title">Withdraw</span>
+            <div class="settings-profile">
+                <a href="settings.html" title="Settings"><i class="fas fa-cog"></i></a>
+                <a href="profile.html" title="Profile">
+                    <img src="https://via.placeholder.com/30" alt="Profile">
+                </a>
+            </div>
+        </div>
+        <div class="nav-bar">
+            <a href="index.html">Overview</a>
+            <a href="convert.html">Convert</a>
+            <a href="deposit.html">Deposit</a>
+            <a href="withdraw.html" class="active">Withdraw</a>
+            <a href="transfer.html">Transfer</a>
+            <a href="history.html">History</a>
+        </div>
+        <div class="withdraw-section">
+            <form class="withdraw-form" id="withdrawForm">
+                <input type="number" id="amount" placeholder="Min amount: 0.001" required min="0.001">
+                <select id="withdrawalMethod" required>
+                    <option value="" disabled selected>Select Withdrawal Method</option>
+                    <option value="bank">Bank Transfer</option>
+                    <option value="usdt">USDT (ERC20)</option>
+                    <option value="btc">BTC</option>
+                </select>
+                <div id="additionalFields"></div>
+                <button type="submit" class="btn-withdraw">Withdraw</button>
+            </form>
+        </div>
+    </div>
+    <script type="module" src="../js/firebase.js"></script>
+    <script src="../js/withdraw.js"></script>
+</body>
+</html>

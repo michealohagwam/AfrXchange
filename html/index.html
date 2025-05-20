@@ -1,0 +1,91 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AfrXchange - Crypto Wallet</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <span class="title">AfrXchange</span>
+            <div class="settings-profile">
+                <div class="notification">
+                    <i class="fas fa-bell" id="notification-icon"></i>
+                    <span class="badge" id="notification-count">3</span>
+                    <div class="notification-dropdown" id="notification-dropdown">
+                        <div class="scrollable">
+                            <div class="notification-item unread">
+                                <div class="red-dot"></div>
+                                <p>Pending KYC verification</p>
+                                <span>2h ago</span>
+                            </div>
+                            <div class="notification-item unread">
+                                <div class="red-dot"></div>
+                                <p>Successful deposit of 0.05 BTC</p>
+                                <span>1d ago</span>
+                            </div>
+                            <div class="notification-item unread">
+                                <div class="red-dot"></div>
+                                <p>Rate alert: USDT hits ₦1500</p>
+                                <span>2d ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="settings.html" title="Settings"><i class="fas fa-cog"></i></a>
+                <a href="profile.html" title="Profile">
+                    <img src="https://via.placeholder.com/30" alt="Profile">
+                </a>
+            </div>
+        </div>
+        <div class="nav-bar">
+            <a href="index.html" class="active">Overview</a>
+            <a href="convert.html">Convert</a>
+            <a href="deposit.html">Deposit</a>
+            <a href="withdraw.html">Withdraw</a>
+            <a href="transfer.html">Transfer</a>
+            <a href="history.html">History</a>
+        </div>
+        <div class="exchange-rate">
+            <p>USDT to Naira   10/09/2024 21:15pm</p>
+            <p>$1 = N1,650 Rate today <span class="rate">+6.1%</span> <span class="change">(0.00%)</span></p>
+        </div>
+        <div class="balance-total">
+            <h2>Hi <span id="user-name">John</span>, your Balance Total is</h2>
+            <h1>
+                <span id="balance-amount">6000.75.56 USDT</span>
+                <i class="fas fa-eye eye-icon" id="toggle-balance"></i>
+            </h1>
+        </div>
+        <div class="unique-account">
+            <p>Your Unique Account Number is:</p>
+            <p id="account-number"><strong>1234567890</strong></p>
+        </div>
+        <div class="btn-group">
+            <button class="btn-deposit">Deposit</button>
+            <button class="btn-withdraw">Withdraw</button>
+            <button class="btn-transfer">Transfer</button>
+        </div>
+        <div class="crypto-convert">
+            <button>Convert Your Crypto Assets to Fiat ></button>
+        </div>
+        <div class="transaction-history">
+            <h3>Transaction History</h3>
+            <div class="transaction-tabs">
+                <a href="#" class="active">All</a>
+                <a href="#">Deposits</a>
+                <a href="#">Transfers</a>
+                <a href="#">Withdrawals</a>
+                <a href="#">Converted</a>
+            </div>
+            <div id="transaction-list"></div>
+            <div id="empty-message" class="empty-message" style="display:none;">
+                Transactions will appear here
+            </div>
+        </div>
+    </div>
+    <script type="module" src="../js/firebase.js"></script>
+    <script src="../js/index.js"></script>
+</body>
+</html>
